@@ -4,14 +4,8 @@ class ErlangAT21 < Formula
   # Download tarball from GitHub; it is served faster than the official tarball.
   url "https://github.com/erlang/otp/archive/OTP-21.3.8.tar.gz"
   sha256 "e20df59eac5ec0f3d47cb775eb7cfb20438df24d93ba859959a18fe07abf3e6e"
-  head "https://github.com/erlang/otp.git"
 
-  bottle do
-    cellar :any
-    sha256 "5cbda1e3a4c354e954d006991bdae1bf740a73c8f5df36dda740c0af2c4a47b9" => :mojave
-    sha256 "608dae8316ef3ddbd34935c723f229ee85715547eb0d3623bbb67458ebd74f69" => :high_sierra
-    sha256 "9acb1df98cb7e3d88fc01b20123e1031e4cd4c0a9c051dc81fb889c3a05018ba" => :sierra
-  end
+  keg_only :versioned_formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
